@@ -16,31 +16,40 @@
     CCBAnimationManager *animationManager = self.userObject;
     animationManager.delegate = self;
     
-    self.previousPageCCBI = @"Lou1.ccbi";
-    self.nextPageCCBI = @"Lou3.ccbi";
-    self.backgroundMusic = @"clean.mp3";
+    previousPageCCBI = @"Lou1.ccbi";
+    nextPageCCBI = @"Lou3.ccbi";
+    backgroundMusic = @"clean.mp3";
     
     father.bodyBtn.isEnabled = NO;
     father.stickBtn.isEnabled = NO;
     father.leftarmBtn.isEnabled = NO;
     father.headBtn.isEnabled = NO;
+    
+    [self setFlipBtns:YES enableNextBtn:YES];
 }
 
 - (void) completedAnimationSequenceNamed:(NSString *)name
 {
-    self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP2.mp3"];
-    [self showFlipBtns:TRUE enableNextBtn:TRUE];
+    storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP2.mp3"];
+    if (!isPause)
+    {
+        father.bodyBtn.isEnabled = YES;
+        father.stickBtn.isEnabled = YES;
+        father.leftarmBtn.isEnabled = YES;
+        father.headBtn.isEnabled = YES;
+    }
     
-    father.bodyBtn.isEnabled = YES;
-    father.stickBtn.isEnabled = YES;
-    father.leftarmBtn.isEnabled = YES;
-    father.headBtn.isEnabled = YES;
+    [self showFlipBtns];
 }
 
-- (void)onExitTransitionDidStart{
-    
-    [[SimpleAudioEngine sharedEngine] stopEffect:father.storySound];
-    [super onExitTransitionDidStart];
+- (void) resumeScene{
+    [super resumeScene];
+    [father enable];
+}
+
+- (void) pauseScene{
+    [father disable];
+    [super pauseScene];
 }
 
 @end

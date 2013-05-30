@@ -12,15 +12,16 @@
 #import "SimpleAudioEngine.h"
 
 @interface p1_warrior : CCNode {
+    SimpleAudioEngine *warriorSound;
     CCMenuItemImage *warriorBtn;
     CCSprite *weapon;
     CCBAnimationManager *animationManager;
-    
-    ALuint   *storySound;
 }
 
 @property (nonatomic, retain) CCMenuItemImage *warriorBtn;
 
--(void) onBtnPressed:(id) sender;
+- (void) onBtnPressed:(id) sender;
+- (void) enable;
+- (void) disable;
 
 @end

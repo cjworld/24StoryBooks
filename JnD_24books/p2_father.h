@@ -6,12 +6,17 @@
 //  Copyright 2013年 __MyCompanyName__. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "CCBAnimationManager.h"
 #import "SimpleAudioEngine.h"
 
+#define qqq 1
+
 @interface p2_father : CCNode {
+    
+    SimpleAudioEngine *fatherSound;
     
     CCMenuItemImage *bodyBtn;
     CCMenuItemImage *stickBtn;
@@ -19,16 +24,15 @@
     CCMenuItemImage *leftarmBtn;
     
     CCBAnimationManager *animationManager;
-    
-    ALuint *storysound;
 }
 
 @property (nonatomic, retain) CCMenuItemImage *bodyBtn;
 @property (nonatomic, retain) CCMenuItemImage *stickBtn;
 @property (nonatomic, retain) CCMenuItemImage *headBtn;
 @property (nonatomic, retain) CCMenuItemImage *leftarmBtn;
-@property (nonatomic, readwrite) ALuint *storySound;
 
--(void) onBtnPressed:(id) sender;
+- (void) onBtnPressed:(id) sender;
+- (void) enable;
+- (void) disable;
 
 @end

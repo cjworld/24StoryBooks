@@ -16,15 +16,17 @@
     CCBAnimationManager *animationManager = self.userObject;
     animationManager.delegate = self;
     
-    self.previousPageCCBI = @"Lou3.ccbi";
-    self.nextPageCCBI = @"Lou5.ccbi";
-    self.backgroundMusic = @"clean.mp3";
+    previousPageCCBI = @"Lou3.ccbi";
+    nextPageCCBI = @"Lou5.ccbi";
+    backgroundMusic = @"clean.mp3";
+    
+    [self setFlipBtns:YES enableNextBtn:YES];
 }
 
 - (void) completedAnimationSequenceNamed:(NSString *)name
 {
-    self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP4.mp3"];
-    [self showFlipBtns:TRUE enableNextBtn:TRUE];
+    storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP4.mp3"];
+    [self showFlipBtns];
 }
 
 @end

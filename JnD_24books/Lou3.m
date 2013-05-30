@@ -16,22 +16,17 @@
     CCBAnimationManager *animationManager = self.userObject;
     animationManager.delegate = self;
     
-    birdsound = [[SimpleAudioEngine sharedEngine] playEffect:@"bird.mp3"];
+    previousPageCCBI = @"Lou2.ccbi";
+    nextPageCCBI = @"Lou4.ccbi";
+    backgroundMusic = @"pray.mp3";
     
-    self.previousPageCCBI = @"Lou2.ccbi";
-    self.nextPageCCBI = @"Lou4.ccbi";
-    self.backgroundMusic = @"pray.mp3";
+    [self setFlipBtns:YES enableNextBtn:YES];
 }
 
 - (void) completedAnimationSequenceNamed:(NSString *)name
 {
-    self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP3.mp3"];
-    [self showFlipBtns:TRUE enableNextBtn:TRUE];
-}
-
-- (void)onExitTransitionDidStart{
-    [[SimpleAudioEngine sharedEngine] stopEffect:birdsound];
-    [super onExitTransitionDidStart];
+    storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP3.mp3"];
+    [self showFlipBtns];
 }
 
 @end

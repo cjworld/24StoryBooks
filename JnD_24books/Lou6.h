@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 #import "CCBReader.h"
 #import "CCBAnimationManager.h"
-#import "LouLaiZuePageLayer.h"
+#import "LLZStoryPageLayer.h"
 
 typedef enum {
     kBookReading,
@@ -43,7 +43,7 @@ typedef enum {
 
 @end
 
-@interface Lou6 : LouLaiZuePageLayer {
+@interface Lou6 : LLZStoryPageLayer {
     
     CGSize _winSize;
     

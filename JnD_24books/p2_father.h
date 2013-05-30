@@ -6,10 +6,13 @@
 //  Copyright 2013年 __MyCompanyName__. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "CCBAnimationManager.h"
 #import "SimpleAudioEngine.h"
+
+#define qqq 1
 
 @interface p2_father : CCNode {
     

@@ -8,13 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "LLZStoryPageLayer.h"
+#import "LouLaiZuePageLayer.h"
 #import "p1_horse.h"
 #import "p1_warrior.h"
 
-@interface Lou1 : LLZStoryPageLayer {
+@interface Lou1 : LouLaiZuePageLayer {
     p1_horse *horse;
     p1_warrior *warrior;
 }
+
+- (void)onExitTransitionDidStart;
 
 @end

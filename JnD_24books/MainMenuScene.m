@@ -72,18 +72,17 @@
 
 -(void) enterPressed:(id)sender{
     [self replaceWithGameMenuScene];
-    [[SimpleAudioEngine sharedEngine] playEffect:@"click.mp3"];
 }
 
 - (void) replaceWithGameMenuScene{
-    /*
+    
     CCNode *sc = [CCBReader nodeGraphFromFile:@"gameMenu_s1.ccbi"];
     sc.tag = 1;
     
     CCScene *scene = [CCScene node];
     [scene addChild: sc];
-    */
-    CCScene *scene = [CCBReader sceneWithNodeGraphFromFile:@"Lou6.ccbi"];
+    
+//    CCScene *scene = [CCBReader sceneWithNodeGraphFromFile:@"Lou6.ccbi"];
     [[CCDirector sharedDirector] replaceScene:scene];
 }
 

@@ -7,7 +7,7 @@
 //
 
 #import "p2_father.h"
-
+#import "SimpleAudioEngine.h"
 
 @implementation p2_father
 
@@ -15,40 +15,21 @@
 @synthesize stickBtn;
 @synthesize headBtn;
 @synthesize leftarmBtn;
+@synthesize storySound;
 
 - (void) didLoadFromCCB
 {
     animationManager = self.userObject;
-    fatherSound = nil;
 }
 
 -(void) onBtnPressed:(id) sender
 {
+    if (self.storySound) {
+        [[SimpleAudioEngine sharedEngine] stopEffect:storySound];
+    }
+    
+    self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"coolcoolsaw.mp3"];
     [animationManager runAnimationsForSequenceNamed:@"scream"];
-    if (fatherSound)
-        [[SimpleAudioEngine sharedEngine] stopEffect:fatherSound];
-    fatherSound = [[SimpleAudioEngine sharedEngine] playEffect:@"cucusaw.mp3"];
-}
-
--(void) onExit
-{
-    if (fatherSound) [[SimpleAudioEngine sharedEngine] stopEffect:fatherSound];
-}
-
-- (void) disable
-{
-    bodyBtn.isEnabled = NO;
-    stickBtn.isEnabled = NO;
-    headBtn.isEnabled = NO;
-    leftarmBtn.isEnabled = NO;
-}
-
-- (void) enable
-{
-    bodyBtn.isEnabled = YES;
-    stickBtn.isEnabled = YES;
-    headBtn.isEnabled = YES;
-    leftarmBtn.isEnabled = YES;
 }
 
 @end

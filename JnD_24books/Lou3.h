@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "LLZStoryPageLayer.h"
+#import "LouLaiZuePageLayer.h"
+#import "SimpleAudioEngine.h"
 
-@interface Lou3 : LLZStoryPageLayer {
-    
+@interface Lou3 : LouLaiZuePageLayer {
+    ALuint * birdsound;
 }
+
+- (void)onExitTransitionDidStart;
 
 @end

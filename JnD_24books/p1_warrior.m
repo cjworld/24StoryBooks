@@ -16,31 +16,11 @@
 - (void) didLoadFromCCB
 {
     animationManager = self.userObject;
-    warriorSound = nil;
 }
 
 -(void) onBtnPressed:(id) sender
 {
     [animationManager runAnimationsForSequenceNamed:@"scream"];
-    if (warriorSound)
-        [[SimpleAudioEngine sharedEngine] stopEffect:warriorSound];
-    warriorSound = [[SimpleAudioEngine sharedEngine] playEffect:@"yell.mp3"];
-
-}
-
--(void) onExit
-{
-    if (warriorSound) [[SimpleAudioEngine sharedEngine] stopEffect:warriorSound];
-}
-
-- (void) disable
-{
-    warriorBtn.isEnabled = NO;
-}
-
-- (void) enable
-{
-    warriorBtn.isEnabled = YES;
 }
 
 @end

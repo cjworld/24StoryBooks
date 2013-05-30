@@ -7,7 +7,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>4</integer>
+	<integer>11</integer>
 	<key>fileType</key>
 	<string>CocosBuilder</string>
 	<key>fileVersion</key>
@@ -2592,8 +2592,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>432</real>
-									<real>555</real>
+									<real>430</real>
+									<real>538</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -3080,8 +3080,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>592</real>
-									<real>555</real>
+									<real>594</real>
+									<real>538</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -3568,8 +3568,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>794</real>
-									<real>555</real>
+									<real>758</real>
+									<real>538</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -4056,8 +4056,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>230</real>
-									<real>555</real>
+									<real>266</real>
+									<real>538</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -4698,7 +4698,7 @@
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
-						<false/>
+						<true/>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4719,7 +4719,7 @@
 						<key>type</key>
 						<string>Byte</string>
 						<key>value</key>
-						<integer>150</integer>
+						<integer>0</integer>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -5028,7 +5028,7 @@
 								<key>type</key>
 								<string>Check</string>
 								<key>value</key>
-								<false/>
+								<true/>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -5113,7 +5113,7 @@
 						<key>value</key>
 						<array>
 							<real>50</real>
-							<real>50</real>
+							<real>110</real>
 							<integer>4</integer>
 						</array>
 					</dict>
@@ -5157,7 +5157,7 @@
 						<key>type</key>
 						<string>Check</string>
 						<key>value</key>
-						<false/>
+						<true/>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -7779,7 +7779,7 @@
 			<key>autoPlay</key>
 			<false/>
 			<key>chainedSequenceId</key>
-			<integer>4</integer>
+			<integer>-1</integer>
 			<key>length</key>
 			<real>40</real>
 			<key>name</key>

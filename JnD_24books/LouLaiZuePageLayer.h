@@ -7,37 +7,35 @@
 //
 
 #import "cocos2d.h"
-#import "CCBReader.h"
 #import "SimpleAudioEngine.h"
-#import "flipPageLayer.h"
-#import "pauseLayer.h"
+#import "LayerWithPauseMenu.h"
 
-@interface LLZStoryPageLayer : CCLayer {
-    pauseLayer *pmLayer;
-    flipPageLayer *fpLayer;
-    Boolean isPause;
+@interface LouLaiZuePageLayer : LayerWithPauseMenu{
+    SimpleAudioEngine *soundEffect;
+    
+    CCNode *prePageBtn;
+    CCNode *nextPageBtn;
+    Boolean isPrePageBtnDisplayed;
+    Boolean isNextPageBtnDisplayed;
     
     NSString *previousPageCCBI;
     NSString *nextPageCCBI;
     NSString *backgroundMusic;
-    ALuint   *storySound;
+
+    
 }
 
 @property (nonatomic, retain) NSString *previousPageCCBI;
 @property (nonatomic, retain) NSString *nextPageCCBI;
 @property (nonatomic, retain) NSString *backgroundMusic;
-@property (nonatomic, readwrite) ALuint *storySound;
 
-- (void) setFlipBtns:(BOOL) _enablePreBtn enableNextBtn:(BOOL)_enableNextBtn;
-- (void) showFlipBtns;
-- (void) hideFlipBtns;
+
+- (void) showFlipBtns:(Boolean) _enablePreBtn enableNextBtn:(Boolean)_enableNextBtn;
 - (void) onNextPgBtnPressed:(id)sender;
 - (void) onPrePgBtnPressed:(id)sender;
 - (void) go2NextPage;
 - (void) go2PrePage;
-- (void) resumeScene;
-- (void) pauseScene;
-- (void) onbPMBtnPressed:(id)sender;
-- (void) back2MainMenuScene;
+
+- (void)onExitTransitionDidStart;
 
 @end

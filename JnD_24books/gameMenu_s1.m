@@ -38,6 +38,10 @@
     {
         [animationManager runAnimationsForSequenceNamed:@"s1"];
     }
+    else
+    {
+        self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"guide.mp3"];
+    }
 }
 
 - (void)onExitTransitionDidStart
@@ -59,21 +63,20 @@
     CCMenuItemImage *button = (CCMenuItemImage*) sender;
     switch (button.tag) {
         case lou_story:
-            self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"guide.mp3"];
+            [[SimpleAudioEngine sharedEngine] stopEffect:self.storySound];
+            self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"guide1.mp3"];
             [animationManager runAnimationsForSequenceNamed:@"lou_story_in"];
             break;
         default:
             break;
     }
     NSLog(@"pressedStory %d", button.tag);
-    [[SimpleAudioEngine sharedEngine] playEffect:@"click.mp3"];
 }
 
 - (void) story1Pressed:(id)sender {
     if (self.storySound) [[SimpleAudioEngine sharedEngine] stopEffect:storySound];
 
     [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"Lou1.ccbi"]];
-    [[SimpleAudioEngine sharedEngine] playEffect:@"click.mp3"];
 }
 
 -(void) showStar:(CCSprite*)sprite keyWord:(NSString*)keyString{
@@ -122,7 +125,7 @@
     }
     else if ([name isEqual: @"lou_story_in"])
     {
-        [[SimpleAudioEngine sharedEngine] playEffect:@"guide1.mp3"];
+
     }
 }
 

@@ -11,16 +11,15 @@
 #import "CCBAnimationManager.h"
 #import "SimpleAudioEngine.h"
 
-
 @interface p1_horse : CCNode {
-    SimpleAudioEngine *horseSound;
     CCMenuItemImage *horseBtn;
     CCBAnimationManager *animationManager;
+    
+    ALuint   *storySound;
 }
 
 @property (nonatomic, retain) CCMenuItemImage *horseBtn;
+@property (nonatomic, readwrite) ALuint *storySound;
 
-- (void) onBtnPressed:(id) sender;
-- (void) enable;
-- (void) disable;
+-(void) onBtnPressed:(id) sender;
 @end

@@ -15,11 +15,9 @@
     CCBAnimationManager *animationManager = self.userObject;
     animationManager.delegate = self;
     
-    previousPageCCBI = @"Lou6.ccbi";
-    nextPageCCBI = nil;
-    backgroundMusic = @"pray.mp3";
-    
-    [self setFlipBtns:YES enableNextBtn:YES];
+    self.previousPageCCBI = @"Lou6.ccbi";
+    self.nextPageCCBI = nil;
+    self.backgroundMusic = @"pray.mp3";
 }
 
 - (void) completedAnimationSequenceNamed:(NSString *)name
@@ -27,26 +25,25 @@
     CCLOG(@"AnimationComplate");
     if ([name isEqual: @"end"]) {
         CCLOG(@"end");
-        storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP7end.mp3"];
     }else{
         CCLOG(@"other");
-        storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP7.mp3"];
-        [self showFlipBtns];
+        self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP7.mp3"];
+        [self showFlipBtns:TRUE enableNextBtn:TRUE];
     }
 }
 
 - (void) onNextPgBtnPressed:(id)sender
 {
+    [[SimpleAudioEngine sharedEngine] stopEffect:self.storySound];
+    self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP7end.mp3"];
     CCLOG(@"onNextPgBtnPressed");
     [self go2EndScene];
 }
 
 - (void) onEndingBtnPressed:(id)sender
 {
-    if (backgroundMusic != nil)
-        [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
-    if (storySound != nil)
-        [[SimpleAudioEngine sharedEngine] stopEffect:storySound];
+    [[SimpleAudioEngine sharedEngine] stopEffect:self.storySound];
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     
     CCNode *sc = [CCBReader nodeGraphFromFile:@"gameMenu_s1.ccbi"];
     CCScene *scene = [CCScene node];
@@ -58,7 +55,7 @@
 - (void) go2EndScene
 {
     CCLOG(@"go2EndScene");
-    [self hideFlipBtns];
+    [self showFlipBtns:FALSE enableNextBtn:FALSE];
     CCBAnimationManager* animationManager = self.userObject;
     [animationManager runAnimationsForSequenceNamed:@"end"];
 }

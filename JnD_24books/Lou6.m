@@ -47,7 +47,7 @@
 {
     _gameState = kBookReading;
     
-    float __time = 11.6;
+    float __time = 14.3;
     float interval = 0.46875;
 
     _beatsArray = [[NSMutableArray alloc] init];
@@ -73,29 +73,31 @@
     [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 26) gestureType:kSwipeLeft] retain]];
     [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 28) gestureType:kSwipeUp] retain]];
     
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 32) gestureType:kSwipeLeft] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 33) gestureType:kSwipeRight] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 34) gestureType:kSwipeLeft] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 35) gestureType:kSwipeRight] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 36) gestureType:kSwipeLeft] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 37) gestureType:kSwipeRight] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 38) gestureType:kSwipeLeft] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 39) gestureType:kSwipeRight] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 40) gestureType:kSwipeUp] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 42) gestureType:kSwipeDown] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 44) gestureType:kSwipeLeft] retain]];
+//    B
     
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 48) gestureType:kSwipeLeft] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 49) gestureType:kSwipeRight] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 50) gestureType:kSwipeLeft] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 51) gestureType:kSwipeRight] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 52) gestureType:kSwipeLeft] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 53) gestureType:kSwipeRight] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 54) gestureType:kSwipeLeft] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 55) gestureType:kSwipeRight] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 56) gestureType:kSwipeUp] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 58) gestureType:kSwipeDown] retain]];
-    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 60) gestureType:kSwipeLeft] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 32 + 0.2) gestureType:kSwipeLeft] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 33 + 0.2) gestureType:kSwipeRight] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 34 + 0.2) gestureType:kSwipeLeft] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 35 + 0.2) gestureType:kSwipeRight] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 36 + 0.2) gestureType:kSwipeLeft] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 37 + 0.2) gestureType:kSwipeRight] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 38 + 0.2) gestureType:kSwipeLeft] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 39 + 0.2) gestureType:kSwipeRight] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 40 + 0.2) gestureType:kSwipeUp] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 42 + 0.2) gestureType:kSwipeDown] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 44 + 0.2) gestureType:kSwipeLeft] retain]];
+    
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 48 + 0.2) gestureType:kSwipeLeft] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 49 + 0.2) gestureType:kSwipeRight] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 50 + 0.2) gestureType:kSwipeLeft] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 51 + 0.2) gestureType:kSwipeRight] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 52 + 0.2) gestureType:kSwipeLeft] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 53 + 0.2) gestureType:kSwipeRight] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 54 + 0.2) gestureType:kSwipeLeft] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 55 + 0.2) gestureType:kSwipeRight] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 56 + 0.2) gestureType:kSwipeUp] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 58 + 0.2) gestureType:kSwipeDown] retain]];
+    [_beatsArray addObject:[[[beatNGesture alloc] init:(__time + interval * 60 + 0.2) gestureType:kSwipeLeft] retain]];
     
     for (int i = 0; i < _beatsArray.count; i++) {
         beatNGesture *beat = [_beatsArray objectAtIndex:i];
@@ -122,8 +124,6 @@
     self.nextPageCCBI = @"Lou7.ccbi";
     self.backgroundMusic = @"clean.mp3";
     
-    [self setFlipBtns:YES enableNextBtn:YES];
-    
     danceBGMAudioSource = (CDLongAudioSource*)[[CDLongAudioSource alloc] init];
     
     [self scheduleUpdate];
@@ -133,7 +133,7 @@
     if (_gameState == kGamePlay)
     {
         [self updateGameTime];
-        CCLOG(@"%f", _gameTime);
+        //CCLOG(@"%f", _gameTime);
         if (isCountDownOver == FALSE)
             [self updateCountDown:_gameTime];
         else
@@ -211,7 +211,7 @@
     //CCLOG(@"casn:%@", name);
     if ([name isEqual:@"Default Timeline"]) {
         self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP6.mp3"];
-        [self showFlipBtns];
+        [self showFlipBtns:TRUE enableNextBtn:TRUE];
     } else if ([name isEqual:@"cdFadeIn"]) {
         [self startCountDown];
     } else if ([name isEqual:@"cdFadeOut"]) {
@@ -370,7 +370,7 @@
 
 - (void) onNextPgBtnPressed:(id)sender {
     if (self.storySound) [[SimpleAudioEngine sharedEngine] stopEffect:storySound];
-    [self hideFlipBtns];
+    [self showFlipBtns:FALSE enableNextBtn:FALSE];
     [self startIntroGame];
 }
 

@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "LLZStoryPageLayer.h"
+#import "LouLaiZuePageLayer.h"
 
-@interface Lou5 : LLZStoryPageLayer {
+@interface Lou5 : LouLaiZuePageLayer {
     
 }
 

@@ -17,38 +17,25 @@
     CCBAnimationManager *animationManager = self.userObject;
     animationManager.delegate = self;
     
-    previousPageCCBI = nil;
-    nextPageCCBI = @"Lou2.ccbi";
-    backgroundMusic = @"pray.mp3";
+    self.previousPageCCBI = nil;
+    self.nextPageCCBI = @"Lou2.ccbi";
+    self.backgroundMusic = @"pray.mp3";
     horse.horseBtn.isEnabled = NO;
     warrior.warriorBtn.isEnabled = NO;
-    
-    [self setFlipBtns:NO enableNextBtn:YES];
 }
 
 - (void) completedAnimationSequenceNamed:(NSString *)name
 {
-    storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP1.mp3"];
-    [self showFlipBtns];
-    if (!isPause)
-    {
-        horse.horseBtn.isEnabled = YES;
-        warrior.warriorBtn.isEnabled = YES;
-    }
+    self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"louP1.mp3"];
+    [self showFlipBtns:FALSE enableNextBtn:TRUE];
+    
+    horse.horseBtn.isEnabled = YES;
+    warrior.warriorBtn.isEnabled = YES;
 }
 
-- (void) resumeScene{
-    CCLOG(@">>>>> Lou1: resumeScene");
-    [super resumeScene];
-    [horse enable];
-    [warrior enable];
-}
-
-- (void) pauseScene{
-    CCLOG(@">>>>> Lou1: pauseScene");
-    [horse disable];
-    [warrior disable];
-    [super pauseScene];
+- (void)onExitTransitionDidStart{
+    [[SimpleAudioEngine sharedEngine] stopEffect:horse.storySound];
+    [super onExitTransitionDidStart];
 }
 
 @end

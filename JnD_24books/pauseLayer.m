@@ -1,30 +1,14 @@
 //
-//  SceneWithPauseMenu.m
+//  pause.m
 //  JnD_24books
 //
-//  Created by Jerry on 13/3/24.
-//
+//  Created by Chen Bo Wei on 13/4/24.
+//  Copyright 2013年 __MyCompanyName__. All rights reserved.
 //
 
 #import "pauseLayer.h"
 
+
 @implementation pauseLayer
 
-- (void) didLoadFromCCB
-{
-    self.position = ccp(0, 768);
-}
-
-- (void) showPauseMenu{
-    CCLOG(@"LayerWithPauseMenu: pauseScene");
-    self.position = ccp(0, 0);
-}
-
-- (void) hidePauseMenu{
-    CCLOG(@"LayerWithPauseMenu: resumeScene");
-    self.position = ccp(0, 768);
-}
-
 @end
-
-

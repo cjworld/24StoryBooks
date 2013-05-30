@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "LLZStoryPageLayer.h"
+#import "LouLaiZuePageLayer.h"
 #import "CCBAnimationManager.h"
 #import "CCBReader.h"
 
 
-@interface Lou7 : LLZStoryPageLayer {
+@interface Lou7 : LouLaiZuePageLayer {
     
 }
 

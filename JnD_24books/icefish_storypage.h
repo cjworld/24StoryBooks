@@ -14,10 +14,12 @@
 @interface storyPage : NSObject{
     NSString *ccbi;
     CCSprite *sprite;
+    NSString *subtitle;
 }
 
 @property (nonatomic,assign) NSString *ccbi;
 @property (nonatomic,assign) CCSprite *sprite;
+@property (nonatomic,assign) NSString *subtitle;
 
 @end
 

@@ -78,8 +78,8 @@
 
 - (void) replaceWithGameMenuScene{
     
-    icefish_storypage *sc = (icefish_storypage *)[CCBReader nodeGraphFromFile:@"icefish_storypage.ccbi"];
-    
+    CCNode *sc = (CCNode *)[CCBReader nodeGraphFromFile:@"gameMenu_s1.ccbi"];
+    sc.tag = 1;
     CCScene *scene = [CCScene node];
     [scene addChild: sc];
     

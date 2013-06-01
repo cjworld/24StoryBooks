@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "CCBReader.h"
+#import "CCBAnimationManager.h"
 
 @interface storyPage : NSObject{
     NSString *ccbi;
@@ -50,6 +51,7 @@
     NSMutableArray *storyEventArray;
     
     int pageIndex;
+    CCBAnimationManager *animationManager;
 }
 
 - (void) onMuteBtnPressed:(id)sender;

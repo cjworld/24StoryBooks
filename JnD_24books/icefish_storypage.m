@@ -81,6 +81,9 @@
     storyPage *firstpage = [storyPageArray objectAtIndex:0];
     CCSprite *firstsprite = firstpage.sprite;
     firstsprite.visible = YES;
+    
+    animationManager = self.userObject;
+    animationManager.delegate = self;
 }
 
 - (void) onEnterTransitionDidFinish
@@ -126,17 +129,28 @@
 
 - (void) onPauseBtnPressed:(id)sender
 {
-
+    btnMenu.enabled = NO;
+    storyContentLayer.visible = NO;
 }
 
 - (void) onHomeBtnPressed:(id)sender
 {
+    CCNode *sc = [CCBReader nodeGraphFromFile:@"gameMenu_s1.ccbi"];
+    CCScene *scene = [CCScene node];
+    [scene addChild: sc];
     
+    [[CCDirector sharedDirector] replaceScene:scene];
 }
 
 - (void) onResumeBtnPressed:(id)sender
 {
-    
+    btnMenu.enabled = YES;
+    storyContentLayer.visible = YES;
+}
+
+- (void) completedAnimationSequenceNamed:(NSString *)name
+{
+
 }
 
 @end

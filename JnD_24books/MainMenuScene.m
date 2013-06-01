@@ -9,6 +9,7 @@
 #import "MainMenuScene.h"
 #import "CCBReader.h"
 #import "SimpleAudioEngine.h"
+#import "icefish_storypage.h"
 
 @implementation MainMenuScene
 
@@ -76,14 +77,13 @@
 }
 
 - (void) replaceWithGameMenuScene{
-    /*
-    CCNode *sc = [CCBReader nodeGraphFromFile:@"gameMenu_s1.ccbi"];
-    sc.tag = 1;
+    
+    icefish_storypage *sc = (icefish_storypage *)[CCBReader nodeGraphFromFile:@"icefish_storypage.ccbi"];
     
     CCScene *scene = [CCScene node];
     [scene addChild: sc];
-    */
-    CCScene *scene = [CCBReader sceneWithNodeGraphFromFile:@"Lou6.ccbi"];
+    
+    //CCScene *scene = [CCBReader sceneWithNodeGraphFromFile:@"Lou6.ccbi"];
     [[CCDirector sharedDirector] replaceScene:scene];
 }
 

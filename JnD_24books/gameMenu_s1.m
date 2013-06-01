@@ -60,7 +60,13 @@
     switch (button.tag) {
         case lou_story:
             self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"guide.mp3"];
-            [animationManager runAnimationsForSequenceNamed:@"lou_story_in"];
+            [animationManager runAnimationsForSequenceNamed:@"fadeInLou"];
+            targetStoryIndex = lou_story;
+            break;
+        case fish_story:
+            self.storySound = [[SimpleAudioEngine sharedEngine] playEffect:@"guide.mp3"];
+            [animationManager runAnimationsForSequenceNamed:@"fadeInIcefish"];
+            targetStoryIndex = fish_story;
             break;
         default:
             break;
@@ -69,10 +75,21 @@
     [[SimpleAudioEngine sharedEngine] playEffect:@"click.mp3"];
 }
 
-- (void) story1Pressed:(id)sender {
+- (void) onReadBtnPressed:(id)sender {
     if (self.storySound) [[SimpleAudioEngine sharedEngine] stopEffect:storySound];
-
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"Lou1.ccbi"]];
+    
+    switch (targetStoryIndex) {
+        case lou_story:
+            [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"Lou1.ccbi"]];
+            break;
+        case fish_story:
+            [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"icefish_storypage.ccbi"]];
+            break;
+        default:
+            break;
+    }
+    
+    
     [[SimpleAudioEngine sharedEngine] playEffect:@"click.mp3"];
 }
 
@@ -120,7 +137,7 @@
     if ([name isEqual: @"s2"]) {
         CCLOG(@"s2 end");
     }
-    else if ([name isEqual: @"lou_story_in"])
+    else if ([name isEqual: @"fadeInLou"] || [name isEqual: @"fadeInIcefish"])
     {
         [[SimpleAudioEngine sharedEngine] playEffect:@"guide1.mp3"];
     }

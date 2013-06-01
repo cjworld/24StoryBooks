@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 JerryNDanny. All rights reserved.
 //
 
-#import "JNDGestureRecognizer.h"
+#import "JNDGestureRecognizer.h" 
 
 @implementation JNDGestureRecognizer
 

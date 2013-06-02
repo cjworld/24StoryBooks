@@ -18,14 +18,18 @@
     CCSprite *star4s2;
     CCSprite *star4s3;
     
+    CCSprite *louInfoPanel;
+    CCSprite *icefishInfoPanel;
+    
     ALuint   *storySound;
+    int targetStoryIndex;
     
 }
 
 @property (nonatomic, readwrite) ALuint *storySound;
 
 -(void) pressedStory:(id)sender;
--(void) story1Pressed:(id)sender;
+-(void) onReadBtnPressed:(id)sender;
 -(void) onIntroEndPressed:(id)sender;
 -(void) showStar:(CCSprite*)sprite keyWord:(NSString*)keyString;
 

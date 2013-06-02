@@ -12,7 +12,8 @@
 #import "CCBAnimationManager.h"
 #import "SimpleAudioEngine.h"
 
-#define qqq 1
+#define qqq 3344
+
 
 @interface p2_father : CCNode {
     

@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "icefish_storycontent.h"
 
-@interface icefish_p3 : CCSprite {
+@interface icefish_p3 : icefish_storycontent {
     
 }
 

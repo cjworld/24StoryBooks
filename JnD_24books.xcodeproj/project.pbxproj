@@ -146,6 +146,8 @@
 		BBDC1401175A11FE00AB55FE /* icefish_pauseBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDC13E9175A11FE00AB55FE /* icefish_pauseBtn.png */; };
 		BBDC1402175A11FE00AB55FE /* icefish_prePageBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDC13EA175A11FE00AB55FE /* icefish_prePageBtn.png */; };
 		BBDC1403175A11FE00AB55FE /* icefish_resumeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDC13EB175A11FE00AB55FE /* icefish_resumeBtn.png */; };
+		BBDC1406175CD4C500AB55FE /* icefish_storycontent.m in Sources */ = {isa = PBXBuildFile; fileRef = BBDC1405175CD4C300AB55FE /* icefish_storycontent.m */; };
+		BBDC1408175CE51A00AB55FE /* icefish_storycontent.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = BBDC1407175CE51A00AB55FE /* icefish_storycontent.ccbi */; };
 		BD06A80A17393E17004B7FD1 /* pray.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD06A80817393E17004B7FD1 /* pray.mp3 */; };
 		BD06A80B17393E17004B7FD1 /* clean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD06A80917393E17004B7FD1 /* clean.mp3 */; };
 		BD06A80F173DF67D004B7FD1 /* bird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD06A80C173DF67D004B7FD1 /* bird.mp3 */; };
@@ -625,6 +627,9 @@
 		BBDC13E9175A11FE00AB55FE /* icefish_pauseBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_pauseBtn.png; path = Resources/ccbi/images/v3_png/icefish_pauseBtn.png; sourceTree = "<group>"; };
 		BBDC13EA175A11FE00AB55FE /* icefish_prePageBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_prePageBtn.png; path = Resources/ccbi/images/v3_png/icefish_prePageBtn.png; sourceTree = "<group>"; };
 		BBDC13EB175A11FE00AB55FE /* icefish_resumeBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_resumeBtn.png; path = Resources/ccbi/images/v3_png/icefish_resumeBtn.png; sourceTree = "<group>"; };
+		BBDC1404175CD4C200AB55FE /* icefish_storycontent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = icefish_storycontent.h; sourceTree = "<group>"; };
+		BBDC1405175CD4C300AB55FE /* icefish_storycontent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = icefish_storycontent.m; sourceTree = "<group>"; };
+		BBDC1407175CE51A00AB55FE /* icefish_storycontent.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = icefish_storycontent.ccbi; path = Resources/ccbi/icefish_storycontent.ccbi; sourceTree = "<group>"; };
 		BD06A80817393E17004B7FD1 /* pray.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pray.mp3; path = ../pray.mp3; sourceTree = "<group>"; };
 		BD06A80917393E17004B7FD1 /* clean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = clean.mp3; path = ../clean.mp3; sourceTree = "<group>"; };
 		BD06A80C173DF67D004B7FD1 /* bird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bird.mp3; path = ../bird.mp3; sourceTree = "<group>"; };
@@ -1226,6 +1231,8 @@
 				BBDC13A617599B0200AB55FE /* icefish_p16.m */,
 				BBDC13A817599B0D00AB55FE /* icefish_p17.h */,
 				BBDC13A917599B0D00AB55FE /* icefish_p17.m */,
+				BBDC1404175CD4C200AB55FE /* icefish_storycontent.h */,
+				BBDC1405175CD4C300AB55FE /* icefish_storycontent.m */,
 				BBDC13AB17599C6A00AB55FE /* icefish_storypage.h */,
 				BBDC13AC17599C6A00AB55FE /* icefish_storypage.m */,
 			);
@@ -1235,6 +1242,7 @@
 		BBDC13D217599CD100AB55FE /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				BBDC1407175CE51A00AB55FE /* icefish_storycontent.ccbi */,
 				BBDC13AE17599CBD00AB55FE /* icefish_p1.ccbi */,
 				BBDC13AF17599CBD00AB55FE /* icefish_p2.ccbi */,
 				BBDC13B017599CBE00AB55FE /* icefish_p3.ccbi */,
@@ -2504,6 +2512,7 @@
 				BBDC1401175A11FE00AB55FE /* icefish_pauseBtn.png in Resources */,
 				BBDC1402175A11FE00AB55FE /* icefish_prePageBtn.png in Resources */,
 				BBDC1403175A11FE00AB55FE /* icefish_resumeBtn.png in Resources */,
+				BBDC1408175CE51A00AB55FE /* icefish_storycontent.ccbi in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2694,6 +2703,7 @@
 				BBDC13A717599B0200AB55FE /* icefish_p16.m in Sources */,
 				BBDC13AA17599B0E00AB55FE /* icefish_p17.m in Sources */,
 				BBDC13AD17599C6B00AB55FE /* icefish_storypage.m in Sources */,
+				BBDC1406175CD4C500AB55FE /* icefish_storycontent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

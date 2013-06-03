@@ -30,6 +30,7 @@ icefish_p6.ccbi
 icefish_p7.ccbi
 icefish_p8.ccbi
 icefish_p9.ccbi
+icefish_storycontent.ccbi
 icefish_storypage.ccbi
 downHint.ccbi
 hitHint.ccbi
@@ -247,6 +248,7 @@ icefish_page_bg.png
 icefish_pauseBtn.png
 icefish_prePageBtn.png
 icefish_resumeBtn.png
+icefish_storycontent_bg.png
 leftHint.ccbi
 Lou1.ccbi
 Lou2.ccbi

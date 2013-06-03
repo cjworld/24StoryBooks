@@ -11,4 +11,13 @@
 
 @implementation icefish_p1
 
+- (id)init
+{
+    if ( self = [super init] )
+    {
+        
+    }
+    return self;
+}
+
 @end

@@ -10,29 +10,7 @@
 #import "cocos2d.h"
 #import "CCBReader.h"
 #import "CCBAnimationManager.h"
-
-@interface storyPage : NSObject{
-    NSString *ccbi;
-    CCSprite *sprite;
-    NSString *subtitle;
-}
-
-@property (nonatomic,assign) NSString *ccbi;
-@property (nonatomic,assign) CCSprite *sprite;
-@property (nonatomic,assign) NSString *subtitle;
-
-@end
-
-@interface storyEvent : NSObject{
-    SEL eventHandler;
-    NSString *subtitle;
-    NSString *music;
-}
-
-@property (nonatomic,assign) NSString *subtitle;
-@property (nonatomic,assign) NSString *music;
-
-@end
+#import "icefish_storycontent.h"
 
 @interface icefish_storypage : CCLayer {
     CCMenu *pauseMenu;
@@ -46,10 +24,8 @@
     CCMenuItemImage *pauseBtn;
     
     CCLayer *storyContentLayer;
-    CCLabelTTF *storySubLbl;
-    CCSprite *storyBgSprite;
     
-    NSMutableArray *storyPageArray;
+    NSMutableArray *storyContentArray;
     NSMutableArray *storyEventArray;
     
     int pageIndex;

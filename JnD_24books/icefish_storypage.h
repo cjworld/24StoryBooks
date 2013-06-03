@@ -24,6 +24,7 @@
     CCMenuItemImage *pauseBtn;
     
     CCLayer *storyContentLayer;
+    CCLabelTTF *subtitleLbl;
     
     NSMutableArray *storyContentArray;
     NSMutableArray *storyEventArray;

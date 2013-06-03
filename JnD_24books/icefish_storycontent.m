@@ -28,8 +28,6 @@
 
 @implementation icefish_storycontent
 
-@synthesize subtitleLbl;
-
 - (void) didLoadFromCCB
 {
 

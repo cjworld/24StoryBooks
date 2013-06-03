@@ -17,7 +17,7 @@
     
     storyContentArray = [[NSMutableArray alloc] init];
     
-    [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_storycontent.ccbi" owner:self]];
+    [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p1.ccbi" owner:self]];
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p2.ccbi" owner:self]];
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p3.ccbi" owner:self]];
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p4.ccbi" owner:self]];
@@ -39,7 +39,6 @@
         pageSprite.visible = NO;
         pageSprite.position = ccp(0, -20);
         [storyContentLayer addChild:pageSprite];
-        //CCLOG(@"%@", pageSprite.subtitleLbl.string);
     }
 
     icefish_storycontent *firstsprite = [storyContentArray objectAtIndex:0];

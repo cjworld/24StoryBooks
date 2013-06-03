@@ -8,9 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "SimpleAudioEngine.h"
+#import "storyPage.h"
 
-@interface icefish_p1 : CCSprite {
+@interface icefish_p1 : storyPage {
     
 }
+
+
+- (void) onMuteBtnPressed:(id)sender;
+
+-(void) init;
+-(void) onClose;
+
+
+
 
 @end

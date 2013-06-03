@@ -7,6 +7,7 @@
 //
 
 #import "icefish_storypage.h"
+#import "SimpleAudioEngine.h"
 
 @implementation storyPage
 
@@ -101,6 +102,8 @@
 
 - (void) onMuteBtnPressed:(id)sender
 {
+//    [[SimpleAudioEngine sharedEngine] mute];
+    CCLOG(@"muteeee");
     
 }
 

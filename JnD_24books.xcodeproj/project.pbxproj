@@ -151,6 +151,7 @@
 		BD06A80F173DF67D004B7FD1 /* bird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD06A80C173DF67D004B7FD1 /* bird.mp3 */; };
 		BD06A810173DF67D004B7FD1 /* horse.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD06A80D173DF67D004B7FD1 /* horse.mp3 */; };
 		BD06A811173DF67D004B7FD1 /* linku.mid in Resources */ = {isa = PBXBuildFile; fileRef = BD06A80E173DF67D004B7FD1 /* linku.mid */; };
+		BD08574A175D414900F63C80 /* storyPage.m in Sources */ = {isa = PBXBuildFile; fileRef = BD085749175D414900F63C80 /* storyPage.m */; };
 		BD0956451726DFED00742315 /* openScene.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = BD0956441726DFED00742315 /* openScene.ccbi */; };
 		BD09564A1726E2CC00742315 /* openScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0956491726E2CC00742315 /* openScene.m */; };
 		BD0956501726E4C900742315 /* LouEnd.m in Sources */ = {isa = PBXBuildFile; fileRef = BD09564F1726E4C900742315 /* LouEnd.m */; };
@@ -630,6 +631,8 @@
 		BD06A80C173DF67D004B7FD1 /* bird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bird.mp3; path = ../bird.mp3; sourceTree = "<group>"; };
 		BD06A80D173DF67D004B7FD1 /* horse.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = horse.mp3; path = ../horse.mp3; sourceTree = "<group>"; };
 		BD06A80E173DF67D004B7FD1 /* linku.mid */ = {isa = PBXFileReference; lastKnownFileType = audio.midi; name = linku.mid; path = ../linku.mid; sourceTree = "<group>"; };
+		BD085748175D414900F63C80 /* storyPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = storyPage.h; sourceTree = "<group>"; };
+		BD085749175D414900F63C80 /* storyPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = storyPage.m; sourceTree = "<group>"; };
 		BD0956441726DFED00742315 /* openScene.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = openScene.ccbi; path = Resources/ccbi/openScene.ccbi; sourceTree = "<group>"; };
 		BD0956481726E2CC00742315 /* openScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openScene.h; sourceTree = "<group>"; };
 		BD0956491726E2CC00742315 /* openScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = openScene.m; sourceTree = "<group>"; };
@@ -1226,6 +1229,8 @@
 				BBDC13A617599B0200AB55FE /* icefish_p16.m */,
 				BBDC13A817599B0D00AB55FE /* icefish_p17.h */,
 				BBDC13A917599B0D00AB55FE /* icefish_p17.m */,
+				BD085748175D414900F63C80 /* storyPage.h */,
+				BD085749175D414900F63C80 /* storyPage.m */,
 				BBDC13AB17599C6A00AB55FE /* icefish_storypage.h */,
 				BBDC13AC17599C6A00AB55FE /* icefish_storypage.m */,
 			);
@@ -2694,6 +2699,7 @@
 				BBDC13A717599B0200AB55FE /* icefish_p16.m in Sources */,
 				BBDC13AA17599B0E00AB55FE /* icefish_p17.m in Sources */,
 				BBDC13AD17599C6B00AB55FE /* icefish_storypage.m in Sources */,
+				BD08574A175D414900F63C80 /* storyPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

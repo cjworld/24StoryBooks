@@ -54,6 +54,7 @@
     
     int pageIndex;
     CCBAnimationManager *animationManager;
+    
 }
 
 - (void) onMuteBtnPressed:(id)sender;

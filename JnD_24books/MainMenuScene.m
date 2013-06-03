@@ -96,7 +96,7 @@
 
 - (void)onExitTransitionDidStart
 {
-//    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 }
 
 @end

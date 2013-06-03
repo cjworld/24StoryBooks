@@ -14,6 +14,7 @@
 
 #define qqq 1199
 
+
 @interface p2_father : CCNode {
     
     SimpleAudioEngine *fatherSound;

@@ -21,9 +21,7 @@
 @end
 
 @interface icefish_storycontent : CCSprite {
-    CCLabelTTF *subtitleLbl;
+    
 }
-
-@property (nonatomic, retain) CCLabelTTF *subtitleLbl;
 
 @end

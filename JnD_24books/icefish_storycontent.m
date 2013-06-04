@@ -28,9 +28,28 @@
 
 @implementation icefish_storycontent
 
+@synthesize subtitleLbl;
+@synthesize curEventIndex;
+
+- (id)init:(SEL)_eventHandler subtitle:(NSString *)_subtitle music:(NSString *)_music
+{
+    if ( self = [super init] )
+    {
+        storyEventArray = [[NSMutableArray alloc] init];
+        storySoundArray = [[NSMutableArray alloc] init];
+        CCLOG(@"init");
+    }
+    return self;
+}
+
 - (void) didLoadFromCCB
 {
+    CCLOG(@"didLoadFromCCB");
+}
 
+- (void) setSubtitle:(NSString *)subtitle
+{
+    subtitleLbl.string = subtitle;
 }
 
 @end

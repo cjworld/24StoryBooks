@@ -11,13 +11,16 @@
 
 @implementation icefish_p1
 
-- (id)init
+- (void) didLoadFromCCB
 {
-    if ( self = [super init] )
-    {
-        
-    }
-    return self;
+    CCLOG(@"didLoadFromCCB");
+}
+
+- (void) onEnter
+{
+    [super onEnter];
+    CCLOG(@"onEnter");
+    //[self setStorySubtitle:@"page1"];
 }
 
 @end

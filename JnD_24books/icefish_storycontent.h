@@ -20,8 +20,17 @@
 
 @end
 
+
 @interface icefish_storycontent : CCSprite {
-    
+    int curEventIndex;
+    CCLabelTTF *subtitleLbl;
+    NSMutableArray *storyEventArray;
+    NSMutableArray *storySoundArray;
 }
+
+@property (nonatomic, assign) int curEventIndex;
+@property (nonatomic, assign) CCLabelTTF *subtitleLbl;
+
+- (void) setSubtitle:(NSString *)subtitle;
 
 @end

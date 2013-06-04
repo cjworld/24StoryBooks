@@ -13,8 +13,6 @@
 - (void) didLoadFromCCB {
     pageIndex = 0;
     
-    storyEventArray = [[NSMutableArray alloc] init];
-    
     storyContentArray = [[NSMutableArray alloc] init];
     
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p1.ccbi" owner:self]];
@@ -36,6 +34,7 @@
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p17.ccbi" owner:self]];
     
     for (icefish_storycontent *pageSprite in storyContentArray) {
+        pageSprite.subtitleLbl = subtitleLbl;
         pageSprite.visible = NO;
         pageSprite.position = ccp(0, -20);
         [storyContentLayer addChild:pageSprite];
@@ -43,6 +42,7 @@
 
     icefish_storycontent *firstsprite = [storyContentArray objectAtIndex:0];
     firstsprite.visible = YES;
+    [firstsprite setSubtitle:@"page1"];
     
     animationManager = self.userObject;
     animationManager.delegate = self;

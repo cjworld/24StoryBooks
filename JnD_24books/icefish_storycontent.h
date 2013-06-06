@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CCBAnimationManager.h"
 
 @interface storyEvent : NSObject{
     SEL eventHandler;
@@ -15,8 +16,11 @@
     NSString *music;
 }
 
+@property (nonatomic,assign) SEL eventHandler;
 @property (nonatomic,assign) NSString *subtitle;
 @property (nonatomic,assign) NSString *music;
+
+- (id)init:(SEL)_eventHandler subtitle:(NSString *)_subtitle music:(NSString *)_music;
 
 @end
 
@@ -26,11 +30,13 @@
     CCLabelTTF *subtitleLbl;
     NSMutableArray *storyEventArray;
     NSMutableArray *storySoundArray;
+    CCBAnimationManager *animationManager;
 }
 
 @property (nonatomic, assign) int curEventIndex;
 @property (nonatomic, assign) CCLabelTTF *subtitleLbl;
 
 - (void) setSubtitle:(NSString *)subtitle;
+- (void) executeNextEvent;
 
 @end

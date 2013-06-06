@@ -10,6 +10,7 @@
 
 @implementation storyEvent
 
+@synthesize eventHandler;
 @synthesize subtitle;
 @synthesize music;
 
@@ -31,25 +32,39 @@
 @synthesize subtitleLbl;
 @synthesize curEventIndex;
 
-- (id)init:(SEL)_eventHandler subtitle:(NSString *)_subtitle music:(NSString *)_music
+- (id)init
 {
     if ( self = [super init] )
     {
         storyEventArray = [[NSMutableArray alloc] init];
         storySoundArray = [[NSMutableArray alloc] init];
-        CCLOG(@"init");
+        curEventIndex = 0;
+        CCLOG(@"[icefish_storycontent] init");
     }
     return self;
 }
 
 - (void) didLoadFromCCB
 {
-    CCLOG(@"didLoadFromCCB");
+    CCLOG(@"[icefish_storycontent] didLoadFromCCB");
 }
 
 - (void) setSubtitle:(NSString *)subtitle
 {
     subtitleLbl.string = subtitle;
+}
+
+- (void) executeNextEvent
+{
+    CCLOG(@"executeNextEvent");
+    if ([storyEventArray count] > curEventIndex)
+    {
+        storyEvent *nextEvent = [storyEventArray objectAtIndex:curEventIndex];
+        [self setSubtitle:nextEvent.subtitle];
+        if (nextEvent.eventHandler != nil)
+            [self performSelector:nextEvent.eventHandler];
+        curEventIndex ++;
+    }
 }
 
 @end

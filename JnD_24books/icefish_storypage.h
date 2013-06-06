@@ -27,7 +27,7 @@
     CCLabelTTF *subtitleLbl;
     
     NSMutableArray *storyContentArray;
-    NSMutableArray *storyEventArray;
+    
     
     int pageIndex;
     CCBAnimationManager *animationManager;

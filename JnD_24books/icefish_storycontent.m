@@ -44,11 +44,6 @@
     return self;
 }
 
-- (void) didLoadFromCCB
-{
-    CCLOG(@"[icefish_storycontent] didLoadFromCCB");
-}
-
 - (void) setSubtitle:(NSString *)subtitle
 {
     subtitleLbl.string = subtitle;
@@ -56,7 +51,7 @@
 
 - (void) executeNextEvent
 {
-    CCLOG(@"executeNextEvent");
+    CCLOG(@"[icefish_storycontent] executeNextEvent");
     if ([storyEventArray count] > curEventIndex)
     {
         storyEvent *nextEvent = [storyEventArray objectAtIndex:curEventIndex];

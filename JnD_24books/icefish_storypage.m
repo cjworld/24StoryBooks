@@ -11,11 +11,11 @@
 @implementation icefish_storypage
 
 - (void) didLoadFromCCB {
-    pageIndex = 0;
     
+    CCLOG(@"[icefish_storypage] didLoadFromCCB");
+    pageIndex = 7;
     storyContentArray = [[NSMutableArray alloc] init];
-    
-    [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p1.ccbi" owner:self]];
+    [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p1.ccbi"]];
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p2.ccbi" owner:self]];
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p3.ccbi" owner:self]];
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p4.ccbi" owner:self]];
@@ -39,10 +39,9 @@
         pageSprite.position = ccp(0, -20);
         [storyContentLayer addChild:pageSprite];
     }
-
-    icefish_storycontent *firstsprite = [storyContentArray objectAtIndex:0];
+    
+    icefish_storycontent *firstsprite = [storyContentArray objectAtIndex:pageIndex];
     firstsprite.visible = YES;
-    [firstsprite setSubtitle:@"page1"];
     
     animationManager = self.userObject;
     animationManager.delegate = self;
@@ -50,16 +49,6 @@
     pauseMenu.enabled = NO;
     
     [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
-}
-
-- (void) onEnterTransitionDidFinish
-{
-
-}
-
-- (void) onExitTransitionDidStart
-{
-    
 }
 
 - (void) onMuteBtnPressed:(id)sender
@@ -112,21 +101,23 @@
     storyContentLayer.visible = YES;
 }
 
-- (void) completedAnimationSequenceNamed:(NSString *)name
-{
-
-}
-
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-    CCLOG(@"touch");
+    CCLOG(@"[icefish_storypage] ccTouchBegan");
+    /*
     CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
     CGPoint relative_touchLocation = ccpSub(touchLocation, storyContentLayer.position);
     if (CGRectContainsPoint(subtitleLbl.boundingBox, relative_touchLocation))
     {
+        */
         icefish_storycontent *curStoryContent = [storyContentArray objectAtIndex:pageIndex];
         [curStoryContent executeNextEvent];
-    }
+    //}
     return TRUE;
+}
+
+- (void) completedAnimationSequenceNamed:(NSString *)name
+{
+    CCLOG(@"[icefish_storypage] completedAnimationSequenceNamed:%@", name);
 }
 
 @end

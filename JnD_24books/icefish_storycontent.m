@@ -31,6 +31,7 @@
 
 @synthesize subtitleLbl;
 @synthesize curEventIndex;
+@synthesize icefishStoryContentDelegate;
 
 - (id)init
 {
@@ -59,6 +60,10 @@
         if (nextEvent.eventHandler != nil)
             [self performSelector:nextEvent.eventHandler];
         curEventIndex ++;
+    }
+    else if ([storyEventArray count] >= curEventIndex)
+    {
+        [icefishStoryContentDelegate flashNextPageBtn];
     }
 }
 

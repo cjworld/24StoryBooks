@@ -12,7 +12,7 @@
 #import "CCBAnimationManager.h"
 #import "icefish_storycontent.h"
 
-@interface icefish_storypage : CCLayer {
+@interface icefish_storypage : CCLayer <icefishStoryContentDelegate> {
     CCMenu *pauseMenu;
     CCMenuItemImage *homeBtn;
     CCMenuItemImage *resumeBtn;
@@ -39,5 +39,6 @@
 - (void) onPauseBtnPressed:(id)sender;
 - (void) onHomeBtnPressed:(id)sender;
 - (void) onResumeBtnPressed:(id)sender;
+- (void) flashNextPageBtn;
 
 @end

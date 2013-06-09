@@ -24,6 +24,11 @@
 
 @end
 
+@protocol icefishStoryContentDelegate <NSObject>
+
+- (void) flashNextPageBtn;
+
+@end
 
 @interface icefish_storycontent : CCSprite {
     int curEventIndex;
@@ -31,10 +36,12 @@
     NSMutableArray *storyEventArray;
     NSMutableArray *storySoundArray;
     CCBAnimationManager *animationManager;
+    id<icefishStoryContentDelegate> icefishStoryContentDelegate;
 }
 
 @property (nonatomic, assign) int curEventIndex;
 @property (nonatomic, assign) CCLabelTTF *subtitleLbl;
+@property (nonatomic, weak) id<icefishStoryContentDelegate>  icefishStoryContentDelegate;
 
 - (void) setSubtitle:(NSString *)subtitle;
 - (void) executeNextEvent;

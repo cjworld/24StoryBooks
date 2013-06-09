@@ -40,6 +40,7 @@
         pageSprite.subtitleLbl = subtitleLbl;
         pageSprite.visible = NO;
         pageSprite.position = ccp(0, -20);
+        pageSprite.icefishStoryContentDelegate = self;
         [storyContentLayer addChild:pageSprite];
     }
     
@@ -70,6 +71,7 @@
         cursprite.visible = NO;
         presprite.visible = YES;
         presprite.curEventIndex = 0;
+        [animationManager runAnimationsForSequenceNamed:@"Default Timeline"];
         [presprite executeNextEvent];
     }
 }
@@ -83,6 +85,7 @@
         cursprite.visible = NO;
         nextsprite.visible = YES;
         nextsprite.curEventIndex = 0;
+        [animationManager runAnimationsForSequenceNamed:@"Default Timeline"];
         [nextsprite executeNextEvent];
     }
 }
@@ -133,6 +136,11 @@
 - (void) completedAnimationSequenceNamed:(NSString *)name
 {
     CCLOG(@"[icefish_storypage] completedAnimationSequenceNamed:%@", name);
+}
+
+- (void) flashNextPageBtn
+{
+    [animationManager runAnimationsForSequenceNamed:@"nextPageBtnFlash"];
 }
 
 @end

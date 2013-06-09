@@ -11,7 +11,13 @@
 #import "icefish_storycontent.h"
 
 @interface icefish_p11 : icefish_storycontent {
-    
+    CCNode *wsSprite;
+    CCNode *stoneSprite;
+    CCBAnimationManager *wsAnimationManager;
+    CCBAnimationManager *stoneAnimationManager;
 }
+    
+@property (nonatomic, assign) CCNode *wsSprite;
+@property (nonatomic, assign) CCNode *stoneSprite;
 
 @end

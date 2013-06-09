@@ -8,14 +8,17 @@
 
 #import "icefish_storypage.h"
 
+#define kStoryReading 1
+#define kStoryPausing 2
+
 @implementation icefish_storypage
 
 - (void) didLoadFromCCB {
+    
+    CCLOG(@"[icefish_storypage] didLoadFromCCB");
     pageIndex = 0;
-    
     storyContentArray = [[NSMutableArray alloc] init];
-    
-    [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p1.ccbi" owner:self]];
+    [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p1.ccbi"]];
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p2.ccbi" owner:self]];
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p3.ccbi" owner:self]];
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p4.ccbi" owner:self]];
@@ -39,10 +42,9 @@
         pageSprite.position = ccp(0, -20);
         [storyContentLayer addChild:pageSprite];
     }
-
-    icefish_storycontent *firstsprite = [storyContentArray objectAtIndex:0];
+    
+    icefish_storycontent *firstsprite = [storyContentArray objectAtIndex:pageIndex];
     firstsprite.visible = YES;
-    [firstsprite setSubtitle:@"page1"];
     
     animationManager = self.userObject;
     animationManager.delegate = self;
@@ -50,16 +52,8 @@
     pauseMenu.enabled = NO;
     
     [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
-}
-
-- (void) onEnterTransitionDidFinish
-{
-
-}
-
-- (void) onExitTransitionDidStart
-{
     
+    storyState = kStoryReading;
 }
 
 - (void) onMuteBtnPressed:(id)sender
@@ -75,6 +69,8 @@
         icefish_storycontent *presprite = [storyContentArray objectAtIndex:--pageIndex];
         cursprite.visible = NO;
         presprite.visible = YES;
+        presprite.curEventIndex = 0;
+        [presprite executeNextEvent];
     }
 }
 
@@ -86,6 +82,8 @@
         icefish_storycontent *nextsprite = [storyContentArray objectAtIndex:++pageIndex];
         cursprite.visible = NO;
         nextsprite.visible = YES;
+        nextsprite.curEventIndex = 0;
+        [nextsprite executeNextEvent];
     }
 }
 
@@ -94,6 +92,8 @@
     btnMenu.enabled = NO;
     pauseMenu.enabled = YES;
     storyContentLayer.visible = NO;
+    
+    storyState = kStoryPausing;
 }
 
 - (void) onHomeBtnPressed:(id)sender
@@ -110,23 +110,29 @@
     btnMenu.enabled = YES;
     pauseMenu.enabled = NO;
     storyContentLayer.visible = YES;
+    
+    storyState = kStoryReading;
+}
+
+- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
+    CCLOG(@"[icefish_storypage] ccTouchBegan with state=%d", storyState);
+    
+    CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
+    if (storyState == kStoryReading)
+    {
+        subtitleLbl.string = @"";
+        icefish_storycontent *curStoryContent = [storyContentArray objectAtIndex:pageIndex];
+        
+        CGPoint relative_touchLocation = ccpSub(touchLocation, storyContentLayer.position);
+        relative_touchLocation = ccp(relative_touchLocation.x + curStoryContent.boundingBox.size.width/2, relative_touchLocation.y + curStoryContent.boundingBox.size.height/2);
+        [curStoryContent onTouched:relative_touchLocation];
+    }
+    return TRUE;
 }
 
 - (void) completedAnimationSequenceNamed:(NSString *)name
 {
-
-}
-
-- (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-    CCLOG(@"touch");
-    CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
-    CGPoint relative_touchLocation = ccpSub(touchLocation, storyContentLayer.position);
-    if (CGRectContainsPoint(subtitleLbl.boundingBox, relative_touchLocation))
-    {
-        icefish_storycontent *curStoryContent = [storyContentArray objectAtIndex:pageIndex];
-        [curStoryContent executeNextEvent];
-    }
-    return TRUE;
+    CCLOG(@"[icefish_storypage] completedAnimationSequenceNamed:%@", name);
 }
 
 @end

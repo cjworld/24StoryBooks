@@ -11,7 +11,13 @@
 #import "icefish_storycontent.h"
 
 @interface icefish_p5 : icefish_storycontent {
-    
+    CCSprite *fatherSprite;
+    CCBAnimationManager *fatherAnimationManager;
+    CCSprite *motherSprite;
+    CCBAnimationManager *motherAnimationManager;
 }
+
+@property (nonatomic, assign) CCNode *fatherSprite;
+@property (nonatomic, assign) CCNode *motherSprite;
 
 @end

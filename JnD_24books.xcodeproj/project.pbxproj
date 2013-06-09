@@ -168,6 +168,15 @@
 		BBDC142E1761069B00AB55FE /* icefish_wongshawn_right_lleg.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDC141B1761069B00AB55FE /* icefish_wongshawn_right_lleg.png */; };
 		BBDC142F1761069B00AB55FE /* icefish_wongshawn_right_uleg.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDC141C1761069B00AB55FE /* icefish_wongshawn_right_uleg.png */; };
 		BBDC14301761069B00AB55FE /* icefish_wood.png in Resources */ = {isa = PBXBuildFile; fileRef = BBDC141D1761069B00AB55FE /* icefish_wood.png */; };
+		BBE865F01763755600D90A26 /* icefish_father.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = BBE865EE1763755600D90A26 /* icefish_father.ccbi */; };
+		BBE865F11763755600D90A26 /* icefish_mother.ccbi in Resources */ = {isa = PBXBuildFile; fileRef = BBE865EF1763755600D90A26 /* icefish_mother.ccbi */; };
+		BBF66AC31764438E00632C43 /* icefish_body_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = BBF66AC11764438E00632C43 /* icefish_body_shadow.png */; };
+		BBF66AC41764438E00632C43 /* icefish_stone.png in Resources */ = {isa = PBXBuildFile; fileRef = BBF66AC21764438E00632C43 /* icefish_stone.png */; };
+		BBF66AC61764556100632C43 /* icefish_bed.png in Resources */ = {isa = PBXBuildFile; fileRef = BBF66AC51764556100632C43 /* icefish_bed.png */; };
+		BBF66ACA17647A9500632C43 /* icefish_ax.png in Resources */ = {isa = PBXBuildFile; fileRef = BBF66AC717647A9500632C43 /* icefish_ax.png */; };
+		BBF66ACB17647A9500632C43 /* icefish_tree.png in Resources */ = {isa = PBXBuildFile; fileRef = BBF66AC817647A9500632C43 /* icefish_tree.png */; };
+		BBF66ACC17647A9500632C43 /* icefish_treetrunk.png in Resources */ = {isa = PBXBuildFile; fileRef = BBF66AC917647A9500632C43 /* icefish_treetrunk.png */; };
+		BBF66ACE17647C6700632C43 /* icefish_tree_half.png in Resources */ = {isa = PBXBuildFile; fileRef = BBF66ACD17647C6700632C43 /* icefish_tree_half.png */; };
 		BD06A80A17393E17004B7FD1 /* pray.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD06A80817393E17004B7FD1 /* pray.mp3 */; };
 		BD06A80B17393E17004B7FD1 /* clean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD06A80917393E17004B7FD1 /* clean.mp3 */; };
 		BD06A80F173DF67D004B7FD1 /* bird.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD06A80C173DF67D004B7FD1 /* bird.mp3 */; };
@@ -670,6 +679,15 @@
 		BBDC141B1761069B00AB55FE /* icefish_wongshawn_right_lleg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_wongshawn_right_lleg.png; path = Resources/ccbi/images/v3_png/icefish_wongshawn_right_lleg.png; sourceTree = "<group>"; };
 		BBDC141C1761069B00AB55FE /* icefish_wongshawn_right_uleg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_wongshawn_right_uleg.png; path = Resources/ccbi/images/v3_png/icefish_wongshawn_right_uleg.png; sourceTree = "<group>"; };
 		BBDC141D1761069B00AB55FE /* icefish_wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_wood.png; path = Resources/ccbi/images/v3_png/icefish_wood.png; sourceTree = "<group>"; };
+		BBE865EE1763755600D90A26 /* icefish_father.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = icefish_father.ccbi; path = Resources/ccbi/icefish_father.ccbi; sourceTree = "<group>"; };
+		BBE865EF1763755600D90A26 /* icefish_mother.ccbi */ = {isa = PBXFileReference; lastKnownFileType = file; name = icefish_mother.ccbi; path = Resources/ccbi/icefish_mother.ccbi; sourceTree = "<group>"; };
+		BBF66AC11764438E00632C43 /* icefish_body_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_body_shadow.png; path = Resources/ccbi/images/v3_png/icefish_body_shadow.png; sourceTree = "<group>"; };
+		BBF66AC21764438E00632C43 /* icefish_stone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_stone.png; path = Resources/ccbi/images/v3_png/icefish_stone.png; sourceTree = "<group>"; };
+		BBF66AC51764556100632C43 /* icefish_bed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_bed.png; path = Resources/ccbi/images/v3_png/icefish_bed.png; sourceTree = "<group>"; };
+		BBF66AC717647A9500632C43 /* icefish_ax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_ax.png; path = Resources/ccbi/images/v3_png/icefish_ax.png; sourceTree = "<group>"; };
+		BBF66AC817647A9500632C43 /* icefish_tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_tree.png; path = Resources/ccbi/images/v3_png/icefish_tree.png; sourceTree = "<group>"; };
+		BBF66AC917647A9500632C43 /* icefish_treetrunk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_treetrunk.png; path = Resources/ccbi/images/v3_png/icefish_treetrunk.png; sourceTree = "<group>"; };
+		BBF66ACD17647C6700632C43 /* icefish_tree_half.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icefish_tree_half.png; path = Resources/ccbi/images/v3_png/icefish_tree_half.png; sourceTree = "<group>"; };
 		BD06A80817393E17004B7FD1 /* pray.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = pray.mp3; path = ../pray.mp3; sourceTree = "<group>"; };
 		BD06A80917393E17004B7FD1 /* clean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = clean.mp3; path = ../clean.mp3; sourceTree = "<group>"; };
 		BD06A80C173DF67D004B7FD1 /* bird.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = bird.mp3; path = ../bird.mp3; sourceTree = "<group>"; };
@@ -1282,6 +1300,8 @@
 		BBDC13D217599CD100AB55FE /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				BBE865EE1763755600D90A26 /* icefish_father.ccbi */,
+				BBE865EF1763755600D90A26 /* icefish_mother.ccbi */,
 				BBDC14091761041D00AB55FE /* icefish_wongshawn.ccbi */,
 				BBDC1407175CE51A00AB55FE /* icefish_storycontent.ccbi */,
 				BBDC13AE17599CBD00AB55FE /* icefish_p1.ccbi */,
@@ -1309,6 +1329,13 @@
 		BBDC13D3175A11D200AB55FE /* images */ = {
 			isa = PBXGroup;
 			children = (
+				BBF66ACD17647C6700632C43 /* icefish_tree_half.png */,
+				BBF66AC717647A9500632C43 /* icefish_ax.png */,
+				BBF66AC817647A9500632C43 /* icefish_tree.png */,
+				BBF66AC917647A9500632C43 /* icefish_treetrunk.png */,
+				BBF66AC51764556100632C43 /* icefish_bed.png */,
+				BBF66AC11764438E00632C43 /* icefish_body_shadow.png */,
+				BBF66AC21764438E00632C43 /* icefish_stone.png */,
 				BBDC140B1761069B00AB55FE /* icefish_father_arm.png */,
 				BBDC140C1761069B00AB55FE /* icefish_father_body.png */,
 				BBDC140D1761069B00AB55FE /* icefish_father_head_with_mouth.png */,
@@ -2593,6 +2620,15 @@
 				BBDC142E1761069B00AB55FE /* icefish_wongshawn_right_lleg.png in Resources */,
 				BBDC142F1761069B00AB55FE /* icefish_wongshawn_right_uleg.png in Resources */,
 				BBDC14301761069B00AB55FE /* icefish_wood.png in Resources */,
+				BBE865F01763755600D90A26 /* icefish_father.ccbi in Resources */,
+				BBE865F11763755600D90A26 /* icefish_mother.ccbi in Resources */,
+				BBF66AC31764438E00632C43 /* icefish_body_shadow.png in Resources */,
+				BBF66AC41764438E00632C43 /* icefish_stone.png in Resources */,
+				BBF66AC61764556100632C43 /* icefish_bed.png in Resources */,
+				BBF66ACA17647A9500632C43 /* icefish_ax.png in Resources */,
+				BBF66ACB17647A9500632C43 /* icefish_tree.png in Resources */,
+				BBF66ACC17647A9500632C43 /* icefish_treetrunk.png in Resources */,
+				BBF66ACE17647C6700632C43 /* icefish_tree_half.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

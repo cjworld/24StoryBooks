@@ -38,5 +38,6 @@
 
 - (void) setSubtitle:(NSString *)subtitle;
 - (void) executeNextEvent;
+- (void) onTouched:(CGPoint)relative_touchLocation;
 
 @end

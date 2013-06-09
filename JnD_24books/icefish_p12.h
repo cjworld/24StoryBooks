@@ -11,7 +11,7 @@
 #import "icefish_storycontent.h"
 
 @interface icefish_p12 : icefish_storycontent {
-    
+
 }
 
 @end

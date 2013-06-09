@@ -28,7 +28,7 @@
     
     NSMutableArray *storyContentArray;
     
-    
+    int storyState;
     int pageIndex;
     CCBAnimationManager *animationManager;
 }

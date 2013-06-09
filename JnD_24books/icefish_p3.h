@@ -12,9 +12,12 @@
 
 @interface icefish_p3 : icefish_storycontent {
     CCSprite *wsSprite;
+    CCSprite *axSprite;
     CCBAnimationManager *wsAnimationManager;
+    CCBAnimationManager *axAnimationManager;
 }
 
 @property (nonatomic, assign) CCNode *wsSprite;
+@property (nonatomic, assign) CCNode *axSprite;
 
 @end

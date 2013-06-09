@@ -77,14 +77,14 @@
 }
 
 - (void) replaceWithGameMenuScene{
-    /*
+    
     CCNode *sc = (CCNode *)[CCBReader nodeGraphFromFile:@"gameMenu_s1.ccbi"];
     sc.tag = 1;
     CCScene *scene = [CCScene node];
     [scene addChild: sc];
     [[CCDirector sharedDirector] replaceScene:scene];
-    */
-    [[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"icefish_storypage.ccbi"]];
+    
+    //[[CCDirector sharedDirector] replaceScene:[CCBReader sceneWithNodeGraphFromFile:@"icefish_storypage.ccbi"]];
 }
 
 -(void) onEnterTransitionDidFinish

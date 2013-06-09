@@ -62,4 +62,10 @@
     }
 }
 
+- (void) onTouched:(CGPoint)relative_touchLocation
+{
+    CCLOG(@"[icefish_storycontent] onTouched");
+    [self executeNextEvent];
+}
+
 @end

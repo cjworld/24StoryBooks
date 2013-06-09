@@ -8,12 +8,15 @@
 
 #import "icefish_storypage.h"
 
+#define kStoryReading 1
+#define kStoryPausing 2
+
 @implementation icefish_storypage
 
 - (void) didLoadFromCCB {
     
     CCLOG(@"[icefish_storypage] didLoadFromCCB");
-    pageIndex = 7;
+    pageIndex = 0;
     storyContentArray = [[NSMutableArray alloc] init];
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p1.ccbi"]];
     [storyContentArray addObject:(icefish_storycontent *)[CCBReader nodeGraphFromFile:@"icefish_p2.ccbi" owner:self]];
@@ -49,6 +52,8 @@
     pauseMenu.enabled = NO;
     
     [[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+    
+    storyState = kStoryReading;
 }
 
 - (void) onMuteBtnPressed:(id)sender
@@ -64,6 +69,8 @@
         icefish_storycontent *presprite = [storyContentArray objectAtIndex:--pageIndex];
         cursprite.visible = NO;
         presprite.visible = YES;
+        presprite.curEventIndex = 0;
+        [presprite executeNextEvent];
     }
 }
 
@@ -75,6 +82,8 @@
         icefish_storycontent *nextsprite = [storyContentArray objectAtIndex:++pageIndex];
         cursprite.visible = NO;
         nextsprite.visible = YES;
+        nextsprite.curEventIndex = 0;
+        [nextsprite executeNextEvent];
     }
 }
 
@@ -83,6 +92,8 @@
     btnMenu.enabled = NO;
     pauseMenu.enabled = YES;
     storyContentLayer.visible = NO;
+    
+    storyState = kStoryPausing;
 }
 
 - (void) onHomeBtnPressed:(id)sender
@@ -99,19 +110,23 @@
     btnMenu.enabled = YES;
     pauseMenu.enabled = NO;
     storyContentLayer.visible = YES;
+    
+    storyState = kStoryReading;
 }
 
 - (BOOL)ccTouchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
-    CCLOG(@"[icefish_storypage] ccTouchBegan");
-    /*
+    CCLOG(@"[icefish_storypage] ccTouchBegan with state=%d", storyState);
+    
     CGPoint touchLocation = [self convertTouchToNodeSpace:touch];
-    CGPoint relative_touchLocation = ccpSub(touchLocation, storyContentLayer.position);
-    if (CGRectContainsPoint(subtitleLbl.boundingBox, relative_touchLocation))
+    if (storyState == kStoryReading)
     {
-        */
+        subtitleLbl.string = @"";
         icefish_storycontent *curStoryContent = [storyContentArray objectAtIndex:pageIndex];
-        [curStoryContent executeNextEvent];
-    //}
+        
+        CGPoint relative_touchLocation = ccpSub(touchLocation, storyContentLayer.position);
+        relative_touchLocation = ccp(relative_touchLocation.x + curStoryContent.boundingBox.size.width/2, relative_touchLocation.y + curStoryContent.boundingBox.size.height/2);
+        [curStoryContent onTouched:relative_touchLocation];
+    }
     return TRUE;
 }
 

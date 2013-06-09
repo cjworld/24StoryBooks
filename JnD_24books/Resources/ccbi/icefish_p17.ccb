@@ -42,8 +42,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>479</real>
-							<real>202.5</real>
+							<real>531</real>
+							<real>208.5</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -54,11 +54,19 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1.6000000238418579</real>
-							<real>1.6000000238418579</real>
+							<real>1.5</real>
+							<real>1.5</real>
 							<true/>
 							<integer>0</integer>
 						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>-90</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -69,6 +77,80 @@
 						<string>icefish_mother.ccb</string>
 					</dict>
 				</array>
+			</dict>
+			<dict>
+				<key>baseClass</key>
+				<string>CCSprite</string>
+				<key>children</key>
+				<array/>
+				<key>customClass</key>
+				<string></string>
+				<key>displayName</key>
+				<string>CCSprite</string>
+				<key>memberVarAssignmentName</key>
+				<string></string>
+				<key>memberVarAssignmentType</key>
+				<integer>0</integer>
+				<key>properties</key>
+				<array>
+					<dict>
+						<key>name</key>
+						<string>position</string>
+						<key>type</key>
+						<string>Position</string>
+						<key>value</key>
+						<array>
+							<real>592</real>
+							<real>260</real>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>scale</string>
+						<key>type</key>
+						<string>ScaleLock</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<true/>
+							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>ignoreAnchorPointForPosition</string>
+						<key>type</key>
+						<string>Check</string>
+						<key>value</key>
+						<false/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>displayFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string>images/v3_png/icefish_bed.png</string>
+						</array>
+					</dict>
+				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>animatedProperties</key>
@@ -93,8 +175,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>946</real>
-										<real>129.5</real>
+										<real>900</real>
+										<real>70</real>
 									</array>
 								</dict>
 								<dict>
@@ -111,8 +193,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>632</real>
-										<real>129.5</real>
+										<real>622</real>
+										<real>70</real>
 									</array>
 								</dict>
 							</array>
@@ -140,8 +222,8 @@
 					<dict>
 						<key>baseValue</key>
 						<array>
-							<real>946</real>
-							<real>129.5</real>
+							<real>900</real>
+							<real>70</real>
 						</array>
 						<key>name</key>
 						<string>position</string>
@@ -149,8 +231,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>632</real>
-							<real>129.5</real>
+							<real>900</real>
+							<real>70</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -176,8 +258,6 @@
 						<string>icefish_wongshawn.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -301,7 +381,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>2</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
